@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededeb;
+  overflow: visible;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+/* sobre */
+.envelope-bg {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* sello */
+.seal-img {
+  width: 55%; 
+  max-width: 350px; 
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* hoja esquina superior izquierda */
+.corner-leaves-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+  z-index: 3;
+}
+
+/* hoja esquina superior derecha */
+.corner-leaves-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+  z-index: 3;
+}
+
+
+/* flores inferiores */
+.flowers-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  height: auto;
+  overflow: hidden;
+}
+
+.flowers-img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .content-box {
+    width: 80%;
+    max-width: none;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    width: 90%;
+    max-height: 60vh;
+  }
+}
+
+/* responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  .envelope-bg {
+    width: 85%;
+    max-width: 350px;
+  }
+  
+  .seal-img {
+    width: 40%;
+    max-width: 180px;
+  }
+  
+  .corner-leaves-left {
+    width: 220px;
+  }
+  
+  .corner-leaves-right {
+    width: 220px;
+  }
+  
+  .flowers-img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .envelope-bg {
+    width: 80%;
+    max-width: 280px;
+  }
+  
+  .seal-img {
+    width: 50%;
+    max-width: 140px;
+  }
+  
+  .corner-leaves-left {
+    width: 180px;
+  }
+  
+  .corner-leaves-right {
+    width: 180px;
+  }
+  
+  .flowers-img {
+    height: 240px;
+  }
+}
